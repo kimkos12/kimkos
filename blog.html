@@ -1,0 +1,29 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header"><div class="container"><h1>Blog</h1></div></header>
+  <main class="container">
+    <section id="posts">
+      <div id="posts-list"></div>
+    </section>
+  </main>
+  <script>
+    fetch('posts/posts.json').then(r=>r.json()).then(posts=>{
+      const list = document.getElementById('posts-list');
+      posts.forEach(p=>{
+        const card = document.createElement('div');
+        card.className = 'card post-card';
+        card.innerHTML = `<h2><a href="posts/${p.id}.html">${p.title}</a></h2><p class="meta">${p.date}</p><p>${p.excerpt}</p>`;
+        list.appendChild(card);
+        // write individual post pages if not exist (best effort)
+      });
+    });
+  </script>
+</body>
+</html>
