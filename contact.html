@@ -1,185 +1,151 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Contact — Victor Kosgei</title>
-
-  <!-- Bootstrap + FontAwesome -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Victor Kosgei Kimutai</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
-    /* Ensure floating icons override everything else */
-    .social-float {
-      position: fixed !important;
-      top: 50% !important;
-      right: 25px !important;
-      transform: translateY(-50%) !important;
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 15px !important;
-      z-index: 999999 !important;
-      pointer-events: auto !important;
-    }
-
-    .social-btn {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      font-size: 22px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .social-btn:hover {
-      transform: scale(1.2);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-    }
-
-    .whatsapp { background-color: #25D366; }
-    .linkedin { background-color: #0077b5; }
-    .upwork   { background-color: #6fda44; }
-
     body {
-      font-family: "Segoe UI", sans-serif;
-      background: #f9f9f9;
+      background-color: #f8f9fa;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     header {
-      background: #fff;
-      border-bottom: 1px solid #ddd;
-      padding: 1rem 0;
+      background-color: #fff;
+      border-bottom: 1px solid #dee2e6;
+      padding: 15px 0;
+      text-align: center;
     }
 
-    nav a {
-      margin: 0 10px;
-      color: #333;
+    header a {
+      color: #000;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a.active {
-      color: #0077b5;
-      font-weight: bold;
+    header a.active {
+      color: #007bff;
+      text-decoration: underline;
+    }
+
+    .contact-section {
+      padding: 60px 0;
+    }
+
+    .contact-section h2 {
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .floating-icons {
+      position: fixed;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 9999;
+    }
+
+    .floating-icons a {
+      width: 55px;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: white;
+      font-size: 22px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .floating-icons a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    }
+
+    .floating-icons .linkedin { background-color: #0077b5; }
+    .floating-icons .whatsapp { background-color: #25D366; }
+    .floating-icons .upwork { background-color: #6fda44; color: #000; }
+
+    /* Smaller icons on mobile */
+    @media (max-width: 768px) {
+      .floating-icons a {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+      }
     }
 
     footer {
-      background: #f8f8f8;
-      padding: 1rem;
       text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    /* Disable overflow blocking */
-    html, body {
-      overflow-x: visible !important;
-      position: relative !important;
+      padding: 20px;
+      margin-top: 50px;
+      background-color: #fff;
+      border-top: 1px solid #dee2e6;
     }
   </style>
 </head>
-
 <body>
-<header class="site-header">
-  <div class="container text-center">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="hire.html">Hire Me</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="hire.html">Hire Me</a>
+    <a href="contact.html" class="active">Contact</a>
+  </header>
+
+  <!-- Floating Social Icons -->
+  <div class="floating-icons">
+    <a href="https://www.linkedin.com/in/victor-kosgei-620b12330" target="_blank" class="linkedin" title="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://wa.me/254712859814" target="_blank" class="whatsapp" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.upwork.com/freelancers/~01389496abcf6ec834?mp_source=share" target="_blank" class="upwork" title="Upwork">
+      <i class="fa-solid fa-briefcase"></i>
+    </a>
   </div>
-</header>
 
-<main class="container my-4">
-  <section>
-    <h2>Contact</h2>
-    <div class="card p-3 mb-4">
-      <p>Email: <a href="mailto:weldonruto41@gmail.com">weldonruto41@gmail.com</a></p>
-      <p>Phone: <a href="tel:+254712859814">+254712859814</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/victor-kosgei-03839b339" target="_blank">View Profile</a></p>
-      <p>GitHub: <a href="https://github.com/kimkosva" target="_blank">github.com/kimkosva</a></p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="row g-4">
+  <!-- Contact Section -->
+  <section class="contact-section container text-center">
+    <h2>Contact Me</h2>
+    <p class="mb-5">I’d love to hear from you! Please fill out the form below, and I’ll get back to you as soon as possible.</p>
+    
+    <div class="row justify-content-center">
       <div class="col-md-6">
-        <div class="card p-4 shadow-sm">
-          <form action="https://formspree.io/f/your-form-id" method="POST">
-            <label class="form-label">Name</label>
-            <input type="text" name="name" class="form-control mb-2" required>
-            <label class="form-label">Email</label>
-            <input type="email" name="email" class="form-control mb-2" required>
-            <label class="form-label">Service</label>
-            <select name="service" class="form-select mb-2">
-              <option>Data Entry</option>
-              <option>Virtual Assistant</option>
-              <option>Bookkeeping</option>
-              <option>Custom</option>
-            </select>
-            <label class="form-label">Message</label>
-            <textarea name="message" class="form-control mb-3" rows="4"></textarea>
-            <button type="submit" class="btn btn-primary w-100">Send Message</button>
-          </form>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card p-4 shadow-sm">
-          <h3>Book a meeting</h3>
-          <div id="calendly-inline"></div>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-          <script>
-            window.onload = function() {
-              var container = document.getElementById('calendly-inline');
-              if(container) {
-                var iframe = document.createElement('iframe');
-                iframe.style.minHeight = '600px';
-                iframe.style.width = '100%';
-                iframe.src = 'https://calendly.com/your-calendly-username/30min';
-                iframe.frameBorder = 0;
-                container.appendChild(iframe);
-              }
-            }
-          </script>
-        </div>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="card p-4 shadow-sm">
+          <div class="mb-3">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" name="_replyto" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
       </div>
     </div>
   </section>
-</main>
 
-<footer>
-  <div>
-    Connect:
-    <a href="https://wa.me/254712859814" target="_blank">WhatsApp</a> |
-    <a href="https://www.linkedin.com/in/victor-kosgei-03839b339" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/kimkosva" target="_blank">GitHub</a>
-  </div>
-  <div>&copy; 2025 Victor Kosgei — Virtual Assistant & Data Analyst</div>
-</footer>
+  <footer>
+    <p>&copy; 2025 Victor Kosgei Kimutai | Virtual Assistant & Data Analyst</p>
+  </footer>
 
-<!-- Floating Icons -->
-<div class="social-float">
-  <a href="https://wa.me/254712859814" target="_blank" class="social-btn whatsapp" title="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/victor-kosgei-03839b339" target="_blank" class="social-btn linkedin" title="View LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="https://www.upwork.com/freelancers/~01389496abcf6ec834" target="_blank" class="social-btn upwork" title="Visit Upwork">
-    <i class="fas fa-briefcase"></i>
-  </a>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
